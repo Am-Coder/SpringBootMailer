@@ -30,10 +30,11 @@ public class MailController {
 	}
 	
 	@GetMapping(value="/SendMail")
-	public String sendEmail(HttpServletRequest req) throws AddressException, MessagingException, IOException {
+	public ModelAndView sendEmail(HttpServletRequest req,ModelAndView mv) throws AddressException, MessagingException, IOException {
 		sact.sendMail(req.getParameter("to"),req.getParameter("subject"),req.getParameter("content"),req.getParameter("attachment"));
 		logger.info("Message Sent Successful");
-		return "Send success";
+		mv.setViewName("index.html");
+		return mv;
 	}
 	
 
