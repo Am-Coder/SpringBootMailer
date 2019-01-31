@@ -28,8 +28,6 @@ public class ServiceAct	{
 		helper.setTo(to);
 		helper.setSubject(subject);
 		helper.setText(info);
-//		MimeBodyPart attach = new MimeBodyPart();
-//		attach.attachFile(attachment);
 		
 	    FileSystemResource file 
 	      = new FileSystemResource(new File(attachment));
