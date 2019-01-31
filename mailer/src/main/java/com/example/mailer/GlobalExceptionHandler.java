@@ -18,7 +18,7 @@ public class GlobalExceptionHandler {
 
 	@ExceptionHandler({AddressException.class, MessagingException.class, IOException.class})
 	public String exceptionHandler(Exception e) {
-			logger.info("An exception occured"+e.getMessage());
-		return "redirect:index";
+			logger.info("An exception occured : "+e.getMessage());
+		return "redirect:index.html";
 	}
 }
